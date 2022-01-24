@@ -17,7 +17,7 @@ const ID_MAIN_CONTAINER = `main-${AppUtils.randomHexstring()}`;
 const ID_MAIN_TOASTLIST = `main-${AppUtils.randomHexstring()}`;
 const ID_MAIN_TABLIST = `main-${AppUtils.randomHexstring()}`;
 const ID_MAIN_TABCONTENT = `main-${AppUtils.randomHexstring()}`;
-const SOLUTION_URL = 'https://aws.amazon.com/solutions/media2cloud/';
+const SOLUTION_URL = 'https://ionedigital.com/';
 const SOLUTION_ICON = '/images/m2c-short-white.png';
 
 export default class MainView {

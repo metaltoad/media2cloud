@@ -12,6 +12,7 @@ export default class AttributeSlideComponent extends BaseUploadSlideComponent {
     this.$ids = {
       ...this.$ids,
       groupName: `attr-${AppUtils.randomHexstring()}`,
+      contentExp: `attr-${AppUtils.randomHexstring()}`,
       attributeForm: `attr-${AppUtils.randomHexstring()}`,
     };
     this.$group = '';
@@ -81,10 +82,12 @@ export default class AttributeSlideComponent extends BaseUploadSlideComponent {
   async createSlide() {
     const description = this.createDescription();
     const group = this.createGroupName();
+    const contentexp = this.createContentExpiration();  // MT CHANGES
     const attributes = this.createAttributes();
     const attrGroup = $('<div/>').addClass('attr-group')
       .addClass('overflow-auto my-auto align-content-start')
       .append(group)
+      .append(contentexp)
       .append(attributes);
     const controls = this.createControls();
     const row = $('<div/>').addClass('row no-gutters')
@@ -181,6 +184,30 @@ export default class AttributeSlideComponent extends BaseUploadSlideComponent {
       .append(form);
   }
 
+  // MT CHANGE
+  createContentExpiration() {
+    const title = $('<span/>').addClass('d-block p-2 bg-light text-black lead')
+      .html('Content Expiration Date');
+      const desc = $('<p/>').addClass('mt-2')
+      .html('Choose a content expiration date to track when content can be actively used or not.');
+    const name = $('<input/>').addClass('form-control mr-2 datepicker-mt')
+      .attr('id', this.ids.contentExp)
+      .attr('pattern', '^[a-zA-Z0-9_-]{0,128}$')
+      .attr('placeholder', '(Blank)')
+      .datepicker();
+    const form = $('<form/>').addClass('col-4 px-0 needs-validation')
+      .attr('novalidate', 'novalidate')
+      .append($('<label/>').addClass('mr-2 sr-only')
+        .attr('for', this.ids.contentExp)
+        .html(Localization.Messages.GroupName))
+      .append(name);
+
+    return $('<div/>').addClass('mt-0')
+      .append(title)
+      .append(desc)
+      .append(form);
+  }
+
   createAttributes() {
     const title = $('<span/>').addClass('d-block p-2 bg-light text-black lead')
       .html('Additional attributes');
@@ -262,7 +289,7 @@ export default class AttributeSlideComponent extends BaseUploadSlideComponent {
         return true;
       });
     });
-
+    console.log("ADDING ATTRIBUTE FIELD INPUT")
     inputGrp
       .append(key)
       .append(value)

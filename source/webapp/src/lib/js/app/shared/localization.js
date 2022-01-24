@@ -32,12 +32,12 @@ export default class Localization {
       'en-US': {
         Messages: {
           /* signin flow */
-          Title: 'Media2Cloud Demo Portal <span style="font-size:0.85rem">by AWS Solutions Team</span>',
+          Title: 'IONE Digital | Media Dashboard',
           PasswordRequirement: 'Password must be at least <abbr title="eight characters">eight</abbr> characters long and contain <abbr title="one uppercase character">one</abbr> uppercase, <abbr title="one lowercase character">one</abbr> lowercase, <abbr title="one numeric character">one</abbr> number, and <abbr title="one special character">one</abbr> special character.',
           ResetSendCode: 'Please enter the username and press <strong>Send code</strong>. You should receive a 6-digits code in mail in a few minutes. You will need the code to reset the password.',
           ResetPassword: 'Please enter the verification code that has sent to your email address and your new password.',
           /* main view */
-          SolutionName: 'AWS Media2Cloud Solution',
+          SolutionName: 'IOne Digital | Media Dashboard',
           /* about tab panel */
           AboutTab: 'About',
           Mission: 'AWS Media2Cloud Solution is designed to help customers to blah...',
@@ -66,7 +66,7 @@ export default class Localization {
           CollectionTab: 'Collection',
           /* upload tab panel */
           UploadTab: 'Upload',
-          ReviewAnalysisSettings: 'Carefully review the following AI/ML settings that are used to analyze the contents.',
+          ReviewAnalysisSettings: '',
           Enabled: 'Enabled',
           Disabled: 'Disabled',
           NotSet: 'Not set',
@@ -112,8 +112,8 @@ export default class Localization {
           Status: 'Current status',
           OverallStatus: 'Overall status',
           /* dropzone */
-          DropzoneDesc: 'Drag and drop file(s) to the \'drop area\' or click on \'Browse files\' to select file(s) to start the process. You can drop multiple files or folders. (Note: Folder is supported in Chrome, Firefox, and Edge browsers.)',
-          AttributeDesc: 'Associate additional information to the files. The information will be indexed to <a href="https://aws.amazon.com/elasticsearch-service/" target="_blank">Amazon Elasticsearch service</a> and be made available through the search feature.',
+          DropzoneDesc: '',
+          AttributeDesc: '',
           AnalysisDesc: 'Media2Cloud uses various AWS AI services to analyze video, images, audio, and documents. The analysis includes detecting celebrities, faces, labels, moderations, key phrases, entities, sentiments, and transcription. To learn more about AWS AI services, please visit <a href="https://aws.amazon.com/rekognition/" target="_blank">Amazon Rekognition</a>, <a href="https://aws.amazon.com/transcribe/" target="_blank">Amazon Transcribe</a>, and <a href="https://aws.amazon.com/comprehend/" target="_blank">Amazon Comprehend</a>.',
           FinalizeUploadDesc: 'This final upload process assigns an unique ID (uuid) to each file, checks for collision, computes a MD5 checksum of the file, and uses <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html" target="_blank">multipart upload</a> to transfer the file to your Amazon S3 Bucket, {{BUCKET}}. Please confirm the final list below and click on \'Start now\' to start the process.',
           DropFileHere: 'Drop file(s) here to start',
@@ -121,7 +121,7 @@ export default class Localization {
           /* attribute component */
           GroupName: 'Specify group name',
           GroupDesc: 'Specify a group name to tie all the files together. You can then search the files by group later on. The group name should only contain alphanumeric, dash, and underscore characters. Leave it blank if you don\'t want to group them.',
-          AttrDesc: 'Attach additional attributes such as author, synopsis, or genre to the files. The attribute is a set of key-value pairs. Key can contain alphanumeric, dash and underscore characters. Value can contain alphanumeric, dash, underscore, comma, period, or percent sign characters. Use encodeURIComponent to encode the value if it contains other characters.',
+          AttrDesc: 'Searchable text attributes.',
           /* analysis component */
           FramebasedDesc: '<span class="text-success">New feature:</span> Frame based analysis uses Amazon Rekognition Image APIs instead of Amazon Rekognition Video APIs to analyze video files. Detections include celebrities, faces, labels, moderations, and texts. (Note: segment and person pathing detections continue to use Amazon Rekognition Video APIs.)',
           Framebased: 'Frame based analysis',
@@ -166,7 +166,7 @@ export default class Localization {
           Topic: 'Topic analysis',
           Document: 'Document analysis',
           Segment: 'Shot segment detection',
-          CustomlabelDesc: '<span class="text-success">New feature:</span> With <a href="https://aws.amazon.com/rekognition/custom-labels-features/" target="_blank">Amazon Rekognition Custom Labels Feature</a>, you can quickly train a computer vision (CV) model such as image classification or object detection model to identify objects or classes based on your business needs. Select up to <strong>{{MAX_CUSTOMALBELMODELS}}</strong> models. Check out this GitHub sample solution, <a href="https://github.com/aws-samples/amazon-rekognition-custom-brand-detection" target="_blank">Building brand (custom object) detection demo</a>.',
+          CustomlabelDesc: '',
           Customlabel: 'Custom label detection',
           ComprehendInCertainLanguage: '** Comprehend features may not be available in certain languages',
           /* finalize component */
@@ -292,7 +292,7 @@ export default class Localization {
         },
         Tooltips: {
           /* main view */
-          VisitSolutionPage: 'Visit AWS Solutions page',
+          VisitSolutionPage: 'IONE Digital',
           Logout: 'ready to logout?',
           RemoveMedia: 'Remove media from collection',
           /* analysis component */
@@ -345,11 +345,11 @@ export default class Localization {
         },
         Buttons: {
           Back: 'Back',
-          Next: 'Next',
+          Next: 'Advanced Settings',
           Cancel: 'Cancel',
           Close: 'Close',
           Done: 'Done',
-          QuickUpload: 'Quick upload',
+          QuickUpload: 'Begin upload',
           Startover: 'Start over',
           StartNow: 'Start now',
           Remove: 'Remove',

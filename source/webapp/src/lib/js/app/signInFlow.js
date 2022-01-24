@@ -8,7 +8,7 @@ import CognitoConnector from './shared/cognitoConnector.js';
 import ApiHelper from './shared/apiHelper.js';
 import AppUtils from './shared/appUtils.js';
 
-const SOLUTION_ICON = '/images/m2c-full-black.png';
+const SOLUTION_ICON = '/images/m2c-short-white.png';
 
 export default class SignInFlow {
   constructor() {
